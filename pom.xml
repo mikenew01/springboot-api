@@ -80,6 +80,10 @@
         <!-- Profile de desenvolvimento -->
         <profile>
             <id>dev</id>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+
             <activation>
                 <activeByDefault>true</activeByDefault>
                 <property>
@@ -114,6 +118,11 @@
         <!-- Profile de teste -->
         <profile>
             <id>test</id>
+
+            <properties>
+                <activatedProperties>test</activatedProperties>
+            </properties>
+
             <activation>
                 <activeByDefault>false</activeByDefault>
                 <property>
@@ -143,6 +152,10 @@
         <!-- Profile de produção -->
         <profile>
             <id>prod</id>
+            <properties>
+                <activatedProperties>prod</activatedProperties>
+            </properties>
+
             <activation>
                 <activeByDefault>false</activeByDefault>
                 <property>
@@ -166,6 +179,13 @@
                         <artifactId>spring-boot-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
+
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
             </build>
         </profile>
     </profiles>
