@@ -17,7 +17,7 @@ public class PessoaResource {
     @Autowired
     private PessoaService pessoaService;
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<Pessoa>> listar(){
         List<Pessoa> pessoas = pessoaService.listar();
 
@@ -27,7 +27,7 @@ public class PessoaResource {
         return new ResponseEntity<>(pessoas, HttpStatus.OK);
     }
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<Pessoa> salvar(@RequestBody Pessoa pessoa){
         Pessoa pessoaBanco = pessoaService.salvar(pessoa);
 

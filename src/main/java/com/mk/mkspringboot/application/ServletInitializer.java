@@ -1,4 +1,4 @@
-package com.mk.mkspringboot.start;
+package com.mk.mkspringboot.application;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
