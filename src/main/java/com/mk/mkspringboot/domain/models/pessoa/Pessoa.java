@@ -1,9 +1,24 @@
-package com.mk.mkspringboot.models;
+package com.mk.mkspringboot.domain.models.pessoa;
 
-public class Pessoa {
+import com.mk.mkspringboot.domain.models.BaseEntity;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "PESSOA")
+@AttributeOverride(name = "id", column = @Column(name = "COD_PESSOA"))
+public class Pessoa extends BaseEntity{
+
+    @Column(name = "NOME")
     private String nome;
+
+    @Column(name = "SOBRE_NOME")
     private String sobreNome;
+
+    @Column(name = "IDADE")
     private Integer idade;
 
     public Pessoa() {
