@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)]()
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square)]()
-[![label](https://img.shields.io/github/issues-raw/badges/shields/website.svg?style=flat-square)]()
+
 
 # Project Start
 This project is base for application in Spring Boot API.
