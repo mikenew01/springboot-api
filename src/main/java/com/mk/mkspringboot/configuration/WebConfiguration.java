@@ -1,4 +1,4 @@
-package com.mk.mkspringboot.application.configuration;
+package com.mk.mkspringboot.configuration;
 
 
 import org.springframework.context.annotation.Configuration;

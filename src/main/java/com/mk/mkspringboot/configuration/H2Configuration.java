@@ -1,4 +1,4 @@
-package com.mk.mkspringboot.application.configuration;
+package com.mk.mkspringboot.configuration;
 
 import org.h2.server.web.WebServlet;
 import org.h2.tools.Server;
