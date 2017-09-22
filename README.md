@@ -1,7 +1,6 @@
 [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)]()
 [![Build Status](https://travis-ci.org/Maikoncanuto/springboot-api.svg?branch=master)](https://travis-ci.org/Maikoncanuto/springboot-api)
 
-
 # Project Start
 This project is base for application in Spring Boot API.
 
