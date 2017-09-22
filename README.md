@@ -13,7 +13,7 @@ Spring Boot API - Example: [MK Spring Boot API](https://mkspringboot.herokuapp.c
 
 
 ````git
-git clone https://github.com/Maikoncanuto/mkspringboot.git
+git clone https://github.com/Maikoncanuto/springboot.git
 ````
 
 ## Getting Started
