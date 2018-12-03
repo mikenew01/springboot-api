@@ -1,4 +1,4 @@
-package br.com.mk.gestaoeducacional.configuration;
+package br.com.mk.gestaoeducacional.configuration.database;
 
 import org.h2.server.web.WebServlet;
 import org.h2.tools.Server;
