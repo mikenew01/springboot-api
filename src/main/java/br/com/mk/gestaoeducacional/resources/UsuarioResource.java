@@ -26,7 +26,6 @@ public class UsuarioResource extends BaseResource{
     @GetMapping
     public ResponseEntity<?> findAll(){
         List<Usuario> usuarios = usuarioService.findAll();
-
         return ResponseEntity.ok(usuarios);
     }
 }
