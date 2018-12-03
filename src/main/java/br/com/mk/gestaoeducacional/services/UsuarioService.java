@@ -21,4 +21,8 @@ public class UsuarioService implements Serializable {
     public List<Usuario> findAll(){
         return usuarioRepository.findAll();
     }
+
+    public Usuario findByUsername(final String username){
+        return usuarioRepository.findByUsername(username);
+    }
 }
