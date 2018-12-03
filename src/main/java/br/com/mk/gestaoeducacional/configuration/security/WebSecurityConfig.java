@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationTrustResolver;
+import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -59,7 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         if(autenticacaoAtiva){
             http.csrf().disable().authorizeRequests()
-//                    .antMatchers("/api/").permitAll()
+                    .antMatchers("/api/").permitAll()
                     .antMatchers(HttpMethod.POST,"/login").permitAll()
                     .anyRequest().authenticated()
                     .and()
@@ -83,6 +85,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         authenticationProvider.setPasswordEncoder(passwordEncoder());
         authenticationProvider.setUserDetailsService(userDetailsService());
         return authenticationProvider;
+    }
+
+    @Bean
+    public AuthenticationTrustResolver getAuthenticationTrustResolver(){
+        return new AuthenticationTrustResolverImpl();
     }
 
     @Bean

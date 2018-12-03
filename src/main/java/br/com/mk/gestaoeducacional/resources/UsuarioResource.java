@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @ResponseBody
 @RequestMapping("/usuarios")
-public class UsuarioResource {
+public class UsuarioResource extends BaseResource{
 
     private final UsuarioService usuarioService;
 

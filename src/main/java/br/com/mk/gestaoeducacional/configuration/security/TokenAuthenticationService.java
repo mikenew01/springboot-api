@@ -1,9 +1,11 @@
 package br.com.mk.gestaoeducacional.configuration.security;
 
+import br.com.mk.gestaoeducacional.domain.exceptions.AcessoNegadoException;
 import br.com.mk.gestaoeducacional.domain.models.Usuario;
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 
@@ -21,13 +23,15 @@ public class TokenAuthenticationService {
     static final String TOKEN_PREFIX = "Bearer";
     static final String HEADER_STRING = "Authorization";
 
+    private TokenAuthenticationService(){}
+
     public static void addAuthentication(HttpServletResponse response, Authentication authentication){
         final Usuario usuario = (Usuario)authentication.getPrincipal();
 
         HashMap<String, Object> mapa = new HashMap<>();
         mapa.put("id", usuario.getId());
         mapa.put("username", usuario.getUsername());
-        mapa.put("roels", usuario.getAuthorities()); //Retornar os roles
+        mapa.put("roles", usuario.getAuthorities());
 
         final String JWT = Jwts.builder()
                 .setClaims(mapa)
@@ -51,7 +55,7 @@ public class TokenAuthenticationService {
             if(Objects.nonNull(user))
                 return new UsernamePasswordAuthenticationToken(user, null, Collections.emptyList());
             else
-                return null; //trocar para exception
+                throw new AcessoNegadoException("Acesso negado."); //trocar para exception
         }
 
         return null;

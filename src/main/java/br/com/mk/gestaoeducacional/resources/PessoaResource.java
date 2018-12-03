@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/pessoas")
 @ResponseBody
-public class PessoaResource {
+public class PessoaResource extends BaseResource{
 
     @Autowired
     private PessoaService pessoaService;
