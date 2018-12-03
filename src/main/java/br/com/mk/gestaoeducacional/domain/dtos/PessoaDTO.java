@@ -1,4 +1,4 @@
-package com.mk.mkspringboot.domain.dto;
+package br.com.mk.gestaoeducacional.domain.dtos;
 
 public class PessoaDTO {
 

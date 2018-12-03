@@ -1,4 +1,4 @@
-package com.mk.mkspringboot;
+package br.com.mk.gestaoeducacional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

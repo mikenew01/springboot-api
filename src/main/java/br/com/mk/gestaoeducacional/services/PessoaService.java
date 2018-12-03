@@ -1,7 +1,7 @@
-package com.mk.mkspringboot.services;
+package br.com.mk.gestaoeducacional.services;
 
-import com.mk.mkspringboot.domain.models.pessoa.Pessoa;
-import com.mk.mkspringboot.domain.repository.PessoaRepository;
+import br.com.mk.gestaoeducacional.domain.repository.PessoaRepository;
+import br.com.mk.gestaoeducacional.domain.models.Pessoa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

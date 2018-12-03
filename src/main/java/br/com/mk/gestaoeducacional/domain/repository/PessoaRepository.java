@@ -1,6 +1,6 @@
-package com.mk.mkspringboot.domain.repository;
+package br.com.mk.gestaoeducacional.domain.repository;
 
-import com.mk.mkspringboot.domain.models.pessoa.Pessoa;
+import br.com.mk.gestaoeducacional.domain.models.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {

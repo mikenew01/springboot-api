@@ -1,4 +1,4 @@
-package com.mk.mkspringboot.configuration;
+package br.com.mk.gestaoeducacional.configuration;
 
 import org.h2.server.web.WebServlet;
 import org.h2.tools.Server;

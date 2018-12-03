@@ -1,7 +1,7 @@
-package com.mk.mkspringboot.resources;
+package br.com.mk.gestaoeducacional.resources;
 
-import com.mk.mkspringboot.domain.models.pessoa.Pessoa;
-import com.mk.mkspringboot.services.PessoaService;
+import br.com.mk.gestaoeducacional.domain.models.Pessoa;
+import br.com.mk.gestaoeducacional.services.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
